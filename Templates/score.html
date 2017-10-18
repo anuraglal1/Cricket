@@ -1,0 +1,16 @@
+<html>
+	<head><title>Cricket Score</title></head>
+<body>
+{% if id==1 %}
+	<h1> Live Score: </h1>
+{% elif id==2 %}
+	<h1> Commentary: </h1>
+{% elif id==3 %}
+	<h1> Scorecard: </h1>
+{% endif %}
+{% for i in y %}
+	<p style="margin-left: 40px">{{ i }} </p>
+{% endfor %}
+
+</body>
+</html>
