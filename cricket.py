@@ -12,6 +12,7 @@ def score():
         post_id1=request.form.get('live score')
         post_id2=request.form.get('commentary')
         post_id3=request.form.get('scorecard')
+        post_id4=request.form.get('scorecard')
         if post_id1 is not None:
                 #print(matches)
                 x=[]
