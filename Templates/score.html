@@ -8,8 +8,14 @@
 {% elif id==3 %}
 	<h1> Scorecard: </h1>
 {% endif %}
+{% elif id==4 %}
+	<h1> Batting Average: </h1>
+{% endif %}
 {% for i in y %}
 	<p style="margin-left: 40px">{{ i }} </p>
+{% endfor %}
+{% for i in y %}
+	<p style="margin-right: 40px">{{ i }} </p>
 {% endfor %}
 
 </body>
