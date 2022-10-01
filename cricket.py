@@ -12,6 +12,8 @@ def score():
         post_id1=request.form.get('live score')
         post_id2=request.form.get('commentary')
         post_id3=request.form.get('scorecard')
+        # post_id4 will store the batting average
+        post_id4=request.form.get('batting-average')
         if post_id1 is not None:
                 #print(matches)
                 x=[]
@@ -30,6 +32,14 @@ def score():
                 q=2
                 return render_template('score.html',y=x,count=cnt,id=q)
         if post_id3 is not None:
+                x=[]
+                cnt=0
+                for match in matches:
+                         x.append(json.dumps(c.livescore(match['id']),indent=4))
+                         cnt+=1
+                q=3
+                return render_template('score.html',y=x,count=cnt,id=3)
+        if post_id4 is not None:
                 x=[]
                 cnt=0
                 for match in matches:
